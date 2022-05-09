@@ -1,12 +1,12 @@
 
-#                                                                          RSA Algorithem
+#                                                             RSA Algorithem
 def case():
    Num1=(int(input("\nEnter The 1st Number: ")))
-   Num2=(int(input("\nEnter The 2nd number: ")))
-   Product=Num1*Num2
+   Num2=(int(input("Enter The 2nd number: ")))
+   Product=Num1*Num2                  
    Total=Num1-1
    Total1=Num2-1
-   product1=Total*Total1
+   product1=Total*Total1                        #Finding five(n)
    if(1<=product1):
      print("Enter Number less then",product1)
      Rand = (int(input("Enter the number:  ")))
@@ -14,15 +14,17 @@ def case():
        User=(int(input("Enter the number(Assume 3 as an input):  ")))
        g=User*Rand
        k=g%product1
-       print("\n")
-       print("Therfore Public Key: ","[",Rand,"]","[",Product,"]")
+       print("\nTherfore Public Key: ","[",Rand,"]","[",Product,"]")
        print("Therfore Private Key: ","[",Num1,"]","[",Product,"]")
+     else:
+       print("Number is greater then",product1)
+       Q=(int(input((("Press 1 To try again:")))))
+       case()
 
 print("NOTE:\nThe algorithem works on prime Nos\n")
-G=(int(input("Enter any number: ")))
-if(G%2==1):
-  case()   
+G=(int(input("Enter any number: ")))                #user input any number
+if(G%2==1):                                         #(condition)Checking number entered is odd or even  
+  case()                                             #function call    
 else:
   print("This Algorithem Works on Prime Nos")
   x=(int(input((("Press 1 To try again:")))))
-  case()
